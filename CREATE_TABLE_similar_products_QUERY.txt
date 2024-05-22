@@ -1,0 +1,7 @@
+CREATE TABLE similar_products (
+    id VARCHAR(36) PRIMARY KEY,
+    product_id VARCHAR(36),
+    similar_product_id VARCHAR(36),
+    FOREIGN KEY (product_id) REFERENCES products(product_id) ON DELETE CASCADE,
+    FOREIGN KEY (similar_product_id) REFERENCES products(product_id) ON DELETE CASCADE
+);

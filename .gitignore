@@ -1,0 +1,4 @@
+node_modules/
+Shop.API/node_modules/
+Shop.Admin/node_modules/
+Shop.Client/node_modules/

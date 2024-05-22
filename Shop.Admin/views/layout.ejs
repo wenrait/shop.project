@@ -1,0 +1,30 @@
+<!DOCTYPE HTML>
+<html>
+
+<head>
+    <title>SHOP PROJECT</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/normalize.css@8.0.1/normalize.css" />
+    <link rel="stylesheet" href="/<%= process.env.ADMIN_PATH %>/css/style.css" />
+</head>
+
+<body>
+<header class="header">
+    <a href="/admin"><div class=logo></div></a>
+    <% if (isAuthenticated) { %>
+    <div>
+        <a href="/admin/new-product" class="btn btn-primary">Create New Product</a>
+        <span><%=username%></span>
+        <a href="auth/logout">Logout</a>
+    </div>
+
+    <% } %>
+<!--    <form action="/logout" method="GET">-->
+<!--        <button type="submit">Logout</button>-->
+<!--    </form>-->
+</header>
+<div class="container">
+    <%- body %>
+</div>
+</body>
+
+</html>
